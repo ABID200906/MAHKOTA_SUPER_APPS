@@ -108,24 +108,38 @@
                     <div class="w-12 h-12 bg-indigo-50 text-indigo-500 rounded-xl flex items-center justify-center text-xl md:text-2xl group-hover:bg-indigo-500 group-hover:text-white transition-colors shrink-0"><i class="fa-solid fa-chalkboard-user"></i></div>
                     <div class="text-left">
                         <p class="font-black text-slate-800 text-base md:text-lg">Guru / Staff</p>
-                        <p class="text-[10px] font-bold text-slate-400 uppercase leading-tight">Manajemen & Monitor</p>
+                        <p class="text-[10px] font-bold text-slate-400 uppercase leading-tight">Manajemen & Monitor Akademik</p>
                     </div>
                     <i class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-indigo-500 transition-colors"></i>
                 </button>
             </div>
-
+            
             <div id="mahasiswa-form" class="w-full space-y-3 hidden fade-in mt-2">
                 <button onclick="window.backToRole()" class="text-xs font-bold text-brand-600 mb-4 flex items-center hover:underline bg-brand-50 px-3 py-1.5 rounded-lg w-max mx-auto transition"><i class="fa-solid fa-arrow-left mr-2"></i> Kembali Pilih Peran</button>
-                <div class="text-left mb-2"><p class="text-xs font-bold text-slate-500 ml-1 mb-1">Masuk atau Daftar Baru</p></div>
+                <div class="text-left mb-2"><p class="text-xs font-bold text-slate-500 ml-1 mb-1">Masuk sebagai Siswa</p></div>
                 <div class="relative">
                     <i class="fa-solid fa-id-card absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                    <input type="text" id="login-nim" placeholder="NIM Mahasiswa" class="w-full bg-paper-100 rounded-2xl py-3.5 md:py-4 pl-12 pr-4 text-sm font-semibold outline-none focus:ring-2 focus:ring-brand-400 transition-all border border-paper-200 focus:bg-white text-slate-800">
+                    <input type="text" id="login-nim" placeholder="NISN / NIS Siswa" class="w-full bg-paper-100 rounded-2xl py-3.5 md:py-4 pl-12 pr-4 text-sm font-semibold outline-none focus:ring-2 focus:ring-brand-400 transition-all border border-paper-200 focus:bg-white text-slate-800">
                 </div>
                 <div class="relative">
                     <i class="fa-solid fa-user absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
                     <input type="text" id="login-nama" placeholder="Nama Lengkap Anda" class="w-full bg-paper-100 rounded-2xl py-3.5 md:py-4 pl-12 pr-4 text-sm font-semibold outline-none focus:ring-2 focus:ring-brand-400 transition-all border border-paper-200 focus:bg-white text-slate-800">
                 </div>
-                <button id="btn-login-mhs" class="w-full bg-slate-800 text-white font-bold py-4 rounded-2xl mt-4 shadow-lg shadow-slate-800/20 active:scale-95 transition-transform text-base md:text-lg">Masuk Mahasiswa</button>
+                <button id="btn-login-mhs" class="w-full bg-slate-800 text-white font-bold py-4 rounded-2xl mt-4 shadow-lg shadow-slate-800/20 active:scale-95 transition-transform text-base md:text-lg">Masuk Siswa</button>
+            </div>
+            
+            <div id="dosen-form" class="w-full space-y-3 hidden fade-in mt-2">
+                <button onclick="window.backToRole()" class="text-xs font-bold text-indigo-600 mb-4 flex items-center hover:underline bg-indigo-50 px-3 py-1.5 rounded-lg w-max mx-auto transition"><i class="fa-solid fa-arrow-left mr-2"></i> Kembali Pilih Peran</button>
+                <div class="text-left mb-2"><p class="text-xs font-bold text-slate-500 ml-1 mb-1">Masuk sebagai Guru</p></div>
+                <div class="relative">
+                    <i class="fa-solid fa-id-badge absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" id="login-nidn" placeholder="NIP / NUPTK Guru" class="w-full bg-paper-100 rounded-2xl py-3.5 md:py-4 pl-12 pr-4 text-sm font-semibold outline-none focus:ring-2 focus:ring-indigo-400 transition-all border border-paper-200 focus:bg-white text-slate-800">
+                </div>
+                <div class="relative">
+                    <i class="fa-solid fa-lock absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="password" id="login-pass-dosen" placeholder="Password (Opsional)" class="w-full bg-paper-100 rounded-2xl py-3.5 md:py-4 pl-12 pr-4 text-sm font-semibold outline-none focus:ring-2 focus:ring-indigo-400 transition-all border border-paper-200 focus:bg-white text-slate-800">
+                </div>
+                <button id="btn-login-dsn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl mt-4 shadow-lg shadow-indigo-500/30 active:scale-95 transition-transform text-base md:text-lg">Masuk Dashboard</button>
             </div>
 
             <div id="dosen-form" class="w-full space-y-3 hidden fade-in mt-2">
@@ -149,8 +163,8 @@
         
         <nav id="mhs-navbar" class="glass-header z-40 flex flex-row md:flex-col justify-around items-center h-[4.5rem] md:h-full w-[calc(100%-1.5rem)] md:w-24 lg:w-64 border border-paper-200 md:border-y-0 md:border-l-0 px-2 md:px-0 md:pt-8 shrink-0 transition-all bg-white/95 order-2 md:order-1 rounded-[2rem] md:rounded-none shadow-[0_8px_30px_rgba(0,0,0,0.08)] md:shadow-none mb-3 md:mb-0 mx-auto md:mx-0">
             <div class="hidden md:flex items-center justify-center lg:justify-start px-0 lg:px-8 mb-10 text-brand-600 w-full">
-                <img src="logo.jpg" alt="Logo" class="w-full h-full object-cover">
-                <h1 class="text-2xl font-black hidden lg:block tracking-tight">MAHKOTA SUPER APPS</h1>
+                <img src="logo.jpg" alt="Logo" class="w-10 h-10 md:w-12 md:h-12 object-contain lg:mr-3 rounded-lg shadow-sm">
+                <h1 class="text-xl lg:text-2xl font-black hidden lg:block tracking-tight leading-tight">MAHKOTA <br><span class="text-xs text-brand-500 tracking-widest">SUPER APPS</span></h1>
             </div>
 
             <button onclick="window.switchTabMhs('feed', this)" class="nav-btn active flex flex-col items-center justify-center w-full md:h-auto md:py-4 hover:text-brand-500 transition rounded-full">
@@ -2316,7 +2330,7 @@
                 appState = { 
                     isLoggedIn: false, points: 0, level: 1, exp: 0, aksiCount: 0,
                     completedChallengeIds: [], joinedClasses: [], lastAttendanceDate: null,
-                    nim: nim, userName: namaInput, userBio: "Mahasiswa EcoVerse 🌍"
+                    nim: nim, userName: namaInput, userBio: "Siswa MAN 4 Tangerang 🌍"
                 };
             }
 
@@ -4743,7 +4757,7 @@ window.renderSoalMahasiswa = (questions) => {
             chatBox.scrollTop = chatBox.scrollHeight;
         
             try {
-                const promptSystem = "Kamu adalah Lumi, asisten AI ramah di kampus EcoVerse. Jawab singkat, padat, berbahasa Indonesia, dan selipkan emoji yang relevan.";
+                const promptSystem = "Kamu adalah Lumi, asisten AI ramah di MAN 4 Tangerang. Jawab singkat, padat, berbahasa Indonesia, dan selipkan emoji yang relevan.";
         
                 // 3. MENGHUBUNGI SERVER KONEKTIKA
                 const response = await fetch('https://konektika.web.id/v1/chat/completions', {
@@ -4896,12 +4910,12 @@ window.renderSoalMahasiswa = (questions) => {
 
         // ========================== FITUR INFO UKM (ULTRA-PREMIUM UI) ==========================
         const dummyUKMData = [
-            { id: 1, nama: "Teater Kampus", kategori: "Seni & Budaya", desc: "Wadahi bakat akting, tata panggung, dan penyutradaraanmu di teater bergengsi kampus.", status: "Oprec Dibuka", anggota: 124, icon: "fa-masks-theater", color: "rose" },
-            { id: 2, nama: "Klub Robotika", kategori: "Akademik", desc: "Riset dan rakit robot masa depan. Persiapan turnamen Metaverse Robot Challenge antar universitas.", status: "Oprec Dibuka", anggota: 86, icon: "fa-robot", color: "blue" },
-            { id: 3, nama: "UKM Bulutangkis", kategori: "Olahraga", desc: "Latihan rutin dan persiapan kompetisi olahraga tingkat regional dan nasional.", status: "Penuh", anggota: 150, icon: "fa-medal", color: "emerald" },
-            { id: 4, nama: "Pecinta Alam (MAPALA)", kategori: "Relawan", desc: "Eksplorasi alam liar, pelestarian ekosistem lingkungan, dan pelatihan survival.", status: "Oprec Dibuka", anggota: 210, icon: "fa-mountain-sun", color: "amber" },
-            { id: 5, nama: "Paduan Suara", kategori: "Seni & Budaya", desc: "Sumbangkan suara emasmu untuk acara protokoler kampus dan padus tingkat internasional.", status: "Seleksi Ketat", anggota: 95, icon: "fa-music", color: "violet" },
-            { id: 6, nama: "Jurnalistik & Pers", kategori: "Akademik", desc: "Asah kemampuan menulis, reportase, dan publikasi berita melalui media kampus.", status: "Oprec Dibuka", anggota: 64, icon: "fa-newspaper", color: "teal" }
+            { id: 1, nama: "Paskibra", kategori: "Akademik & Disiplin", desc: "Wadahi semangat kebangsaan dan kedisiplinan melalui pelatihan baris-berbaris.", status: "Oprec Dibuka", anggota: 124, icon: "fa-flag", color: "rose" },
+            { id: 2, nama: "Pramuka", kategori: "Relawan", desc: "Latih kepanduan, survival, dan kemandirian dalam organisasi praja muda karana.", status: "Oprec Dibuka", anggota: 186, icon: "fa-campground", color: "amber" },
+            { id: 3, nama: "PMR (Palang Merah Remaja)", kategori: "Relawan", desc: "Pelatihan pertolongan pertama dan aksi kemanusiaan di lingkungan sekolah.", status: "Penuh", anggota: 90, icon: "fa-suitcase-medical", color: "emerald" },
+            { id: 4, nama: "KIR (Karya Ilmiah Remaja)", kategori: "Akademik", desc: "Riset, eksperimen sains, dan persiapan olimpiade KOSSMI/OSN.", status: "Oprec Dibuka", anggota: 65, icon: "fa-flask", color: "blue" },
+            { id: 5, nama: "Teater & Seni Tari", kategori: "Seni & Budaya", desc: "Sumbangkan bakat seni panggung, penyutradaraan, dan pelestarian budaya lokal.", status: "Oprec Dibuka", anggota: 95, icon: "fa-masks-theater", color: "violet" },
+            { id: 6, nama: "Rohis (Kerohanian Islam)", kategori: "Keagamaan", desc: "Kajian Islam, tilawah Al-Quran, dan penyelenggaraan hari besar agama.", status: "Oprec Dibuka", anggota: 210, icon: "fa-book-quran", color: "teal" }
         ];
 
         window.currentUKMFilter = 'Semua';
@@ -5025,7 +5039,7 @@ window.renderSoalMahasiswa = (questions) => {
                 </div>`;
 
             try {
-                let prompt = "Berikan 6 informasi beasiswa terbaru untuk mahasiswa Indonesia yang masih buka pendaftarannya. Format HANYA sebagai JSON Array of Objects dengan properti: 'judul' (nama beasiswa), 'penyelenggara', 'deadline', 'tipe' (misal: Biaya Penuh, Bantuan Dana), 'tag' (Pilih salah satu: Pemerintah, Swasta, Internasional), dan 'url' (tautan asli atau website resmi untuk mendaftar). DILARANG MENAMBAHKAN TEKS LAIN SELAIN JSON ARRAY.";
+                let prompt = "Berikan 6 informasi beasiswa terbaru sesuai dengan tahun ini untuk pelajar SMA/SMK/MA Indonesia atau jalur masuk PTN yang masih buka. Format HANYA sebagai JSON Array..."; 
                 
                 if (query) {
                     prompt = `Carikan informasi beasiswa nyata tentang "${query}" untuk mahasiswa. Format HANYA JSON Array of Objects dengan properti: 'judul', 'penyelenggara', 'deadline', 'tipe', 'tag', 'url'. Maksimal 6. Pastikan URL-nya valid. DILARANG MENAMBAHKAN TEKS LAIN SELAIN JSON ARRAY.`;
